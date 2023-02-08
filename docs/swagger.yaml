@@ -1,0 +1,86 @@
+info:
+  contact: {}
+paths:
+  /user/delectuser:
+    post:
+      parameters:
+      - description: id
+        in: formData
+        name: id
+        type: string
+      responses: {}
+      summary: 删除用户
+      tags:
+      - 用户模块
+  /user/getuserlist:
+    get:
+      responses:
+        "200":
+          description: code","data","message"}
+          schema:
+            type: string
+      summary: 获取用户列表
+      tags:
+      - 用户模块
+  /user/login:
+    post:
+      parameters:
+      - description: 用户名
+        in: formData
+        name: name
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      responses:
+        "200":
+          description: code","message","data"}
+          schema:
+            type: string
+      summary: 用户登录
+      tags:
+      - 用户模块
+  /user/registry:
+    post:
+      parameters:
+      - description: 用户名
+        in: formData
+        name: name
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      - description: 确认密码
+        in: formData
+        name: repassword
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 注册用户
+      tags:
+      - 用户模块
+  /user/updateuser:
+    post:
+      parameters:
+      - description: id
+        in: formData
+        name: id
+        type: string
+      - description: name
+        in: formData
+        name: name
+        type: string
+      - description: password
+        in: formData
+        name: password
+        type: string
+      responses: {}
+      summary: 更新用户信息
+      tags:
+      - 用户模块
+swagger: "2.0"
